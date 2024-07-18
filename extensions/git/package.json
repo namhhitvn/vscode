@@ -1,8 +1,8 @@
 {
-  "name": "git",
-  "displayName": "%displayName%",
+  "name": "git-support-symbolic-link",
+  "displayName": "%displayName% (Support symbolic link)",
   "description": "%description%",
-  "publisher": "vscode",
+  "publisher": "namhhitvn",
   "license": "MIT",
   "version": "1.0.0",
   "engines": {
