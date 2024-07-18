@@ -404,7 +404,7 @@ export class Model implements IRepositoryResolver, IBranchProtectionProviderRegi
 			if (currentFolder.depth < maxDepth || maxDepth === -1) {
 				const childrenFolders = children
 					.filter(dirent =>
-						dirent.isDirectory() && dirent.name !== '.git' &&
+						(dirent.isDirectory() || dirent.isSymbolicLink()) && dirent.name !== '.git' &&
 						!repositoryScanIgnoredFolders.find(f => pathEquals(dirent.name, f)))
 					.map(dirent => path.join(currentFolder.path, dirent.name));
 
